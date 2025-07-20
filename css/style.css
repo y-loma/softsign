@@ -35,6 +35,9 @@ div.container{
 	padding: 0;
 	margin: 0 auto;
 	max-width: 767px;
+}
+
+main div.container{
 	background-color: var(--white);
 }
 
