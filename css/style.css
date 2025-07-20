@@ -1,0 +1,313 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2:wght@400;600;800&family=Shippori+Mincho:wght@400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css');
+
+:root{
+	--black: #262423;
+	--white: #fdfcfb;
+	--highlight: #00acc1;
+	--button-border: #008c9e;
+	--basefont:  "M PLUS 2", sans-serif;
+	--logofont: "Shippori Mincho", serif;
+	--iconfont: "Material Symbols Outlined";
+}
+
+html{
+	font-size: 100%;
+	height: 100%;
+}
+
+body{
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	margin: 0;
+	padding: 0;
+	font-size: 1rem;
+	color: var(--black);
+	background-color: var(--white);
+	font-family: var(--basefont);
+	font-weight: 400;
+	line-height: 1.5;
+}
+
+div.container{
+	padding: 0;
+	margin: 0 auto;
+	max-width: 767px;
+}
+
+a:not(nav a){
+	text-decoration: none;
+	color: var(--highlight);
+	filter: blur(0);
+	transition: all 0.3s ease;
+}
+
+a:not(nav a):hover{
+	filter: blur(0.1rem);
+}
+
+p{
+	margin: 0.2rem 0;
+}
+
+hr{
+	border: none;
+	height: 1px;
+	background-color: var(--highlight);
+	margin: 2rem 0;
+}
+
+/*header*/
+header{
+	flex-shrink: 0;
+}
+
+h1{
+	font-size: 2.5rem;
+	font-family: var(--logofont);
+	font-weight: 800;
+	margin: 0 0;
+	padding: 0 0;
+	line-height: 1.2;
+	color: var(--button-border);
+}
+
+h3{
+	margin: 0;
+	font-size: 1.5rem;
+	font-family: var(--logofont);
+	font-weight: 600;
+	color: var(--highlight);
+	margin-bottom: 1rem;
+}
+
+h4{
+	font-size: 1.3rem;
+	font-family: var(--logofont);
+	font-weight: 600;
+	margin: 1rem auto;
+}
+	
+
+p.author{
+	display: inline;
+	font-size: 0.8rem;
+	font-family: var(--basefont);
+}
+
+/*nav*/
+
+nav{
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+
+nav a{
+	text-decoration: none;
+	display: inline-block;
+	color: var(--highlight);
+	border: var(--button-border) solid 0.1rem;
+	border-radius: 0.25rem;
+	padding: 0.25rem 1rem;
+	box-shadow: 0 0.25rem 0 var(--highlight);
+	transform: translateY(0);
+	transition: all 0.3s ease;
+}
+
+nav a:hover{
+	transform: translateY(0.25rem);
+	box-shadow: 0 0 0 var(--highlight);
+}
+
+nav li{
+	list-style: none;
+	display: inline-block;
+}
+
+nav li:not(:last-child), nav li:not(:first-child){
+	margin: auto 0.5rem;
+}
+
+nav li:not(:has(a)){
+	display: inline-block;
+	color: var(--highlight);
+	border: var(--button-border) solid 0.1rem;
+	border-radius: 0.25rem;
+	padding: 0.25rem 1rem;
+	transform: translateY(0.25rem);
+}
+
+nav li:not(:has(a))::before{
+	white-space: nowrap;
+	content: "\e0c8";
+	display: block;
+	position: absolute;
+	font-size: 1rem;
+	font-family: var(--iconfont);
+	font-variation-settings: 'FILL' 0;
+	bottom: 100%;
+	margin-bottom: 0.1rem;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+/*main*/
+main{
+	margin-top: 1rem;
+	flex-grow: 1;
+}
+
+main div.container{
+	border: var(--highlight) solid 1px;
+	border-radius: 0.5rem;
+	padding: 2rem;
+	box-shadow: 0 0.25rem 0 var(--highlight);
+}
+
+/*footer*/
+footer{
+	flex-shrink: 0;
+	text-align: center;
+	padding-bottom: 1rem;
+	margin-top: 2rem;
+}
+
+
+
+/*author*/
+
+ul.introduction{
+	padding: 0;
+	margin: 0 0 1rem 0;
+	list-style: none;
+	text-indent: 0;
+}
+
+ul.introduction li{
+	text-indent: 0;
+	padding: 0;
+	margin: 0 0 0.2rem 0;
+}
+
+ul.introduction li::before{
+	color: var(--highlight);
+	font-family: var(--iconfont);
+	font-size: 1rem;
+}
+
+ul.introduction li:nth-child(1)::before{
+	content: "\e8f9";
+}
+
+ul.introduction li:nth-child(2)::before{
+	content: "\e40a";
+}
+
+ul.introduction li:nth-child(3)::before{
+	content: "\e87d";
+}
+
+i.fa-brands{
+	font-size: 3rem;
+	padding: 0 0.5rem;
+}
+
+i.fa-x-twitter{
+	color: var(--black);
+}
+
+i.fa-pixiv{
+	color: #0096fa;
+}
+
+i.fa-deviantart{
+	color: #05cc47;
+}
+
+/*mailform*/
+
+form.mailform{
+	width: 90%;
+	margin: auto;
+}
+
+.mailform input, .mailform textarea{
+	font-size: 1rem;
+	background-color: transparent;
+	border: rgba(0, 172, 193, 0) solid 1px;
+	box-shadow: none;
+	outline: none;
+	transition: all 0.3s ease;
+	color: var(--black);
+}
+
+.mailform input[type="text"], .mailform input[type="email"]{
+	width: 20rem;
+	padding: 0.5rem;
+	margin-bottom: 0.5rem;
+	border-bottom: var(--highlight) solid 1px;
+	border-radius: 0;
+}
+
+.mailform textarea{
+	width: 100%;
+	min-width: 20rem;
+	max-width: 40rem;
+	height: 20rem;
+	resize: none;
+	padding: 1rem;
+	border: var(--highlight) solid 1px;
+	border-radius: 0.5rem;
+}
+
+.mailform input[type="text"]:hover, .mailform input[type="email"]:hover, .mailform textarea:hover{
+	background-color: rgba(0, 172, 193, 0.1);
+}
+
+.mailform input[type="text"]:focus, .mailform input[type="email"]:focus, .mailform textarea:focus{
+	background-color: transparent;
+	border: var(--button-border) solid 1px;
+	border-radius: 0.5rem;
+}
+
+.mailform input[type="submit"]{
+	margin-top: 1rem;
+	border: var(--button-border) solid 1px;
+	border-radius: 0.5rem;
+	padding: 1rem 1rem;
+	box-shadow: 0 0.25rem 0 var(--highlight);
+	transform: translateY(0);
+	transition: all 0.3s ease;
+}
+
+.mailform input[type="submit"]:hover{
+	transform: translateY(0.25rem);
+	box-shadow: 0 0 0 var(--highlight);
+	cursor: pointer;
+}
+
+.mailform input[type="submit"]:active{
+	transform: translateY(0.35rem);
+	box-shadow: 0 0 0 var(--highlight);
+	cursor: pointer;
+}
+
+
+.mailform span.material-symbols-outlined{
+	font-size: 1rem;
+	color: var(--highlight);
+}
+
+.hiddentext {	/*ラベルを隠す*/
+	position: absolute;
+	width: 0;
+	height: 0;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	border: 0;
+}
