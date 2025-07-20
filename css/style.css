@@ -25,7 +25,7 @@ body{
 	padding: 0;
 	font-size: 1rem;
 	color: var(--black);
-	background-color: var(--white);
+	background: radial-gradient(circle, var(--white), var(--highlight));
 	font-family: var(--basefont);
 	font-weight: 400;
 	line-height: 1.5;
